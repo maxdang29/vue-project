@@ -2,8 +2,8 @@
   "name": "vue-project",
   "version": "0.0.0",
   "scripts": {
-    "db:serve": "json-server --watch data.json --port=3002",
-    "dev": "vite",
+    "start:server": "json-server --watch db.json",
+    "dev": "concurrently \"npm run start:server\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
@@ -13,6 +13,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "concurrently": "^7.4.0",
     "json-server": "^0.17.0",
     "vue": "^3.2.37",
     "vue-axios": "^3.4.1",
